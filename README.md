@@ -4,6 +4,26 @@
 
 Skills that constrain LLM output style. Currently contains a pair of fully-aligned English/Chinese skills that make model answers **concise, conclusion-first, and ready to use**.
 
+## 安装 / Install
+
+通过 npm 下载 / Download via npm:
+
+```bash
+npm install @mulou/skills-for-gpt
+```
+
+安装后把 SKILL.md 复制到你的 agent skills 目录 / After install, copy the SKILL.md files into your agent's skills folder:
+
+```bash
+# Claude Code (英文版 / English)
+cp -r node_modules/@mulou/skills-for-gpt/concise-response ~/.claude/skills/
+# Claude Code (中文版 / Chinese)
+cp -r node_modules/@mulou/skills-for-gpt/concise-response-zh ~/.claude/skills/
+```
+
+Codex 用户把目标改为 `~/.codex/skills/`。不想装依赖，可用 `npm pack @mulou/skills-for-gpt` 下载 tarball，解压即得两个 SKILL.md。
+Codex users: target `~/.codex/skills/` instead. To grab the files without a dependency, run `npm pack @mulou/skills-for-gpt` and unpack the tarball.
+
 ## Skills
 
 | Skill | 语言 / Language | 说明 / Description |

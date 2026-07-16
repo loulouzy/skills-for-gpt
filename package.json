@@ -1,0 +1,36 @@
+{
+  "name": "@mulou/skills-for-gpt",
+  "version": "1.0.0",
+  "description": "Concise-response skills (English + Chinese) that constrain LLM output: conclusion-first, plain language, no filler. For Claude Code / Codex agents",
+  "keywords": [
+    "claude",
+    "claude-code",
+    "codex",
+    "gpt",
+    "skill",
+    "agent-skill",
+    "concise",
+    "prompt",
+    "llm",
+    "output-style"
+  ],
+  "license": "MIT",
+  "author": "loulouzy",
+  "homepage": "https://github.com/loulouzy/skills-for-gpt#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/loulouzy/skills-for-gpt.git"
+  },
+  "bugs": {
+    "url": "https://github.com/loulouzy/skills-for-gpt/issues"
+  },
+  "files": [
+    "concise-response/SKILL.md",
+    "concise-response-zh/SKILL.md",
+    "README.md"
+  ],
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  }
+}
