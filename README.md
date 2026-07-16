@@ -6,23 +6,35 @@ Skills that constrain LLM output style. Currently contains a pair of fully-align
 
 ## 安装 / Install
 
-通过 npm 下载 / Download via npm:
+默认面向 **Codex**（skills 目录 `~/.codex/skills/`）。Claude Code 用户把下面路径里的 `.codex` 换成 `.claude` 即可。
+Defaults to **Codex** (skills folder `~/.codex/skills/`). Claude Code users: replace `.codex` with `.claude` in the paths below.
+
+**1. 通过 npm 下载 / Download via npm:**
 
 ```bash
 npm install @mulou/skills-for-gpt
 ```
 
-安装后把 SKILL.md 复制到你的 agent skills 目录 / After install, copy the SKILL.md files into your agent's skills folder:
+**2. 把 SKILL.md 复制到 Codex skills 目录 / Copy the SKILL.md files into the Codex skills folder:**
+
+macOS / Linux:
 
 ```bash
-# Claude Code (英文版 / English)
-cp -r node_modules/@mulou/skills-for-gpt/concise-response ~/.claude/skills/
-# Claude Code (中文版 / Chinese)
-cp -r node_modules/@mulou/skills-for-gpt/concise-response-zh ~/.claude/skills/
+mkdir -p ~/.codex/skills
+cp -r node_modules/@mulou/skills-for-gpt/concise-response    ~/.codex/skills/
+cp -r node_modules/@mulou/skills-for-gpt/concise-response-zh ~/.codex/skills/
 ```
 
-Codex 用户把目标改为 `~/.codex/skills/`。不想装依赖，可用 `npm pack @mulou/skills-for-gpt` 下载 tarball，解压即得两个 SKILL.md。
-Codex users: target `~/.codex/skills/` instead. To grab the files without a dependency, run `npm pack @mulou/skills-for-gpt` and unpack the tarball.
+Windows (PowerShell):
+
+```powershell
+New-Item -ItemType Directory -Force "$env:USERPROFILE\.codex\skills" | Out-Null
+Copy-Item -Recurse node_modules\@mulou\skills-for-gpt\concise-response    "$env:USERPROFILE\.codex\skills\"
+Copy-Item -Recurse node_modules\@mulou\skills-for-gpt\concise-response-zh "$env:USERPROFILE\.codex\skills\"
+```
+
+不想装依赖，可用 `npm pack @mulou/skills-for-gpt` 下载 tarball，解压即得两个 SKILL.md。
+Or grab the files without a dependency: `npm pack @mulou/skills-for-gpt` downloads a tarball; unpack it to get the two SKILL.md files.
 
 ## Skills
 
